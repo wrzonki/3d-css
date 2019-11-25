@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#device {
+    $desktopRatioScale: 30px;
+    $desktopWidth: 16 ;
+    $desktopheight: 9;
+
+    $tabletRatioScale: 80px;
+    $tabletWidth: 4 ;
+    $tabletheight: 3;
+    border: 1px solid red;
+    &.desktop {
+        width: $desktopWidth * $desktopRatioScale;
+        height: $desktopheight * $desktopRatioScale;
+    }
+    &.tablet {
+        width: $tabletWidth * $tabletRatioScale;
+        height: $tabletheight * $tabletRatioScale;
+    }
+}

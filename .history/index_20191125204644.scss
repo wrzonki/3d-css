@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$desktopWidth: 4 * 100px ;
+$desktopheight: 3 * 100px;
+#device {
+    width: $desktopWidth;
+    height: $desktopheight;
+    border: 1px solid red;
+}

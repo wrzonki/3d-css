@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(219deg, #dc00ff, #ec9400);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 13s ease infinite;
+    -moz-animation: AnimationName 13s ease infinite;
+    -o-animation: AnimationName 13s ease infinite;
+    animation: AnimationName 13s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0%{background-position:22% 0%}
+        50%{background-position:79% 100%}
+        100%{background-position:22% 0%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:22% 0%}
+        50%{background-position:79% 100%}
+        100%{background-position:22% 0%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:22% 0%}
+        50%{background-position:79% 100%}
+        100%{background-position:22% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:22% 0%}
+        50%{background-position:79% 100%}
+        100%{background-position:22% 0%}
+    }
+}
+
+
+#device {
+    border: 2px solid #fff;
+    border-radius: 13px;
+    position: relative;
+    .nav {
+        $height: 30px;
+        width: 100%;
+        height: $height;
+        position: relative;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .dots {
+            width: 40px;
+            height: $height;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 10px;
+            .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        .tabs {
+            width: 80px * 3;
+            height: 25px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin-left: 10px;
+        }
+        .tab {
+            width: 80px;
+            height: 25px;
+            border: 1px solid #fff;
+        }
+    }
+
+    $desktopRatioScale: 30px;
+    $desktopWidth: 16 ;
+    $desktopheight: 9;
+
+    $tabletRatioScale: 80px;
+    $tabletWidth: 3;
+    $tabletheight: 4;
+
+    $smartphoneRatioScale: 20px;
+    $smartphoneWidth: 9;
+    $smartphoneheight: 19.5;
+
+
+    &.desktop {
+        width: $desktopWidth * $desktopRatioScale;
+        height: $desktopheight * $desktopRatioScale;
+        .bar {
+            top: 30px;
+        }
+    }
+    &.tablet {
+        width: $tabletWidth * $tabletRatioScale;
+        height: $tabletheight * $tabletRatioScale;
+    }
+    &.smartphone {
+        width: $smartphoneWidth * $smartphoneRatioScale;
+        height: $smartphoneheight * $smartphoneRatioScale;
+    }
+
+}
